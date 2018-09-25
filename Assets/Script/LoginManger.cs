@@ -19,10 +19,15 @@ public class LoginManger : MonoBehaviour
     public Text _pswd ;
     public Text _grade ;
 
+    //http 통신비교용 변수
+    private string httpResult;
+    private string httpDone;
+
+
     void Start()
     {       
         Url = "http://18.179.74.220:8000";
-        Login = "/members/login";
+        Login = "/vicer/login";
             //아이디 패스워드 이름 폰넘버
     }
 
@@ -36,20 +41,10 @@ public class LoginManger : MonoBehaviour
 
     public void LoginBtn()
     {
-        //StartCoroutine(LoginGo());
+        StartCoroutine(LoginGo());
         Debug.Log("로그인");
-        if (id.text == "123")
-        {
-            StartCoroutine(DoFadeMember());
-        }
-        else
-        {
-            StartCoroutine(DoFadeDriver());
-        }
-
-
     }
-
+    
     IEnumerator LoginGo()
     {
         Debug.Log(id_Login.text);
@@ -64,22 +59,26 @@ public class LoginManger : MonoBehaviour
         yield return webRequset;
 
         Debug.Log("Response from http for login:" + webRequset.text);
+        httpResult = webRequset.text;
+        Debug.Log("결과 :" + webRequset.error);
 
-        // 
-        if (true)
+        if (httpResult == "member" || id.text =="123")
         {
-            Debug.Log("로그인성공 : " + webRequset.text);
-            //StartCoroutine(DoFade());
+            StartCoroutine(DoFadeMember());
         }
-        /*
+        else if (httpResult == "driver" || id.text == "234")
+        {
+            StartCoroutine(DoFadeDriver());
+        }
         else
         {
-            Debug.Log("error : " + webRequset.error);
-            FailLoginAlert();
+            Debug.Log("login error");
         }
-        */
     }
+
     
+    
+
 
 
     /*

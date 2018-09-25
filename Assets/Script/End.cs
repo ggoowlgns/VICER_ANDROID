@@ -6,7 +6,7 @@ public class End : MonoBehaviour {
 
     // Use this for initialization
     public void gotoMain(){
-        Application.LoadLevel("Main");
-
+        //Application.LoadLevel("Main");
+        Debug.Log("go to Vr");
     }
 }

@@ -6,20 +6,25 @@ using UnityEngine.UI;
 
 public class serial_show : MonoBehaviour {
 
-    public GameObject serial_input;
-    public CanvasGroup onButton;
+    public Toggle check;
+    public GameObject si; // Serial Inputfield
 
+    
     void Start () {
-        
+            
 	}
 
 	void Update () {
-        if (onButton.alpha == 0)
+        //Debug.Log("check :", check);
+        if (check.isOn)
         {
-            serial_input.SetActive(true);
+            //Debug.Log("check : ok");
+            si.SetActive(true);
         }
         else {
-            serial_input.SetActive(false);
+            //si.alpha = 0;
+            //Debug.Log("check : NO");
+            si.SetActive(false);
         }
 
     }

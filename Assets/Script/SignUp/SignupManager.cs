@@ -17,19 +17,33 @@ public class SignupManager : MonoBehaviour {
     public Dropdown month;
     public Dropdown day;
 
+    [Header("job toggle ")]
+    public Toggle check;
+    // 회원가입완료시 나오게 될 안내창의 텍스트 메시지
     public Text alertBody;
 
+    // http 통신에 사용할 주소
     private string Url;
     private string SignUp;
 
+    // 직업이 무엇인지 확인하기 위한 필드
+    public CanvasGroup onButton;
+    public string ocup ;
+
+    //날짜 계산용 정수필드
     private int y;
     private int m;
     private int d;
-    public object Pasre { get; private set; }
 
+    //http 통신결과 비교에 사용할 스트링
+    private string httpResult;
+    private string httpDone;
+
+    
     void Start () {
-        Url = "http://18.179.74.220:8000";
-        SignUp = "/members/signup";
+        Url = "http://18.179.74.220:8000"; 
+        //Url = "http://192.168.35.211";
+        SignUp = "/vicer/reg";
         
     }
 
@@ -40,23 +54,35 @@ public class SignupManager : MonoBehaviour {
         {
             fade();
         }
-    }
+
+       
+        if (check.enabled)
+        {
+            ocup = "member";
+        }
+        else
+        {
+            ocup = "driver";
+        }
+
+    
+    } 
     
 
 
     public void SignupBtn()
     {
+
         StartCoroutine(SignupGo());
         Debug.Log("signup go");
-        if (id_signUp.text == "123")
+
+        if (httpResult == "success")
         {
-            //SuccessSignupAlert();
-            alertBody.text = "good";
+            alertBody.text = "회원가입에 성공 하셨습니다. 이제 로그인 해주시기 바랍니다.";
         }
         else
         {
-            //FailSignupAlert();
-            alertBody.text = "so so";
+            alertBody.text = "회원 가입간 오류가 발생하였습니다. 다시 시도해 주시기 바랍니다.";
         }
 
     }
@@ -82,57 +108,22 @@ public class SignupManager : MonoBehaviour {
         form.AddField("id", id_signUp.text);
         form.AddField("passwd", pswd_signUp.text);
         //yyyy/mm/dd
-        form.AddField("year", y.ToString() +"/"+ m.ToString() +"/"+ d.ToString());
         form.AddField("email", email_signUp.text);
-        form.AddField("serial", car_serial_signUp.text);
+        form.AddField("serialNum", car_serial_signUp.text);
+        form.AddField("ocup", ocup);
+        form.AddField("birth", y.ToString() +"/"+ m.ToString() +"/"+ d.ToString());
         
-
 
 
         WWW webRequset = new WWW(Url + SignUp, form);
         yield return webRequset;
 
         Debug.Log("Response from http for signup:" + webRequset.text);
+        Debug.Log("Response from http for signup:" + webRequset.isDone);
+        Debug.Log("Response from http for signup:" + webRequset.error);
+        httpResult = webRequset.text;
 
-    }
 
-    //회원가입 실패시 나오는 팝업.
-    public void FailSignupAlert()
-    {
-        string title = "회원가입 실패...";
-        string message = "다시 시도해 주세요 ㅜㅜ";
-
-        AlertViewController.Show(title, message, new AlertViewOptions
-        {
-            cancelButtonTitle = "다시 시도",
-            cancelButtonDelegate = () =>
-            {
-                Debug.Log("계속 가입하기");
-            },
-            //        okButtonTitle = "메인메뉴로 가기", okButtonDelegate = () =>
-            //        {
-            //           Debug.Log("메인메뉴버튼 누름");
-            //       }
-        });
-    }
-    //회원가입 되면 나오는 팝업.
-    public void SuccessSignupAlert()
-    {
-        string title = "회원가입이 완료되었습니다.";
-        string message = "이제 로그인이 가능합니다.";
-
-        AlertViewController.Show(title, message, new AlertViewOptions
-        {
-            cancelButtonTitle = "계속",
-            cancelButtonDelegate = () =>
-            {
-                Debug.Log("계속 가입하기");
-            },
-            //        okButtonTitle = "메인메뉴로 가기", okButtonDelegate = () =>
-            //        {
-            //           Debug.Log("메인메뉴버튼 누름");
-            //       }
-        });
     }
 
     public void fade()

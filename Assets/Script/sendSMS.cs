@@ -11,10 +11,13 @@ public class sendSMS : MonoBehaviour {
     */
     public Text number;
     public Text body;
-    public Text status;
+    //public Text status; ??
+
 
     private string Url;
     private string send;
+    private string httpResult;
+
 
     void Start () {
         Application.runInBackground = true;//?? 왜 안되지..
@@ -43,18 +46,19 @@ public class sendSMS : MonoBehaviour {
         yield return webRequset;
 
         Debug.Log("Response from http for login:" + webRequset.text);
+        httpResult = webRequset.text;
 
         // 
-        if (number.text == "123")
+        if (webRequset.isDone)
         {
             Debug.Log("잘 전송 됨ㅎㅎ : " + webRequset.text);
-            status.text = "전송이 성공적으로 되었습니다. 운전기사의 연결을 기다려 주세요.";
+            //status.text = "전송이 성공적으로 되었습니다. 운전기사의 연결을 기다려 주세요.";
         }
         
         else 
         {
             Debug.Log("전송 안댐 : " + webRequset.error);
-            status.text = "전송에 실패하였습니다. 다시 확인 후 전송하여 주세요.";
+            //status.text = "전송에 실패하였습니다. 다시 확인 후 전송하여 주세요.";
         }
         
 
