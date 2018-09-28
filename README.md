@@ -8,9 +8,11 @@
 * 제작된 컨트롤러로 부터 받은 제어값을 Bluetooth 통신으로 받아 소켓서버에 전송
 * 차량 제어 준비가 끝나면 Gear VR에 장착하여 차량으로부터 수신된 360도 스트리밍 영상을 송출
 
-## 개발환경 설정.
+## 개발환경 설정 실행환경
 VR 화면을 어플에서 제공해주기 위하여 XR 시장의 2/3을 차지하고 있는 Unity를 사용하여 개발하였다.</br>
-Samsung Gear VR을 사용하기 위하여 핸드폰 기종은 Galaxy 시리즈를 사용한다.
+Samsung Gear VR을 사용하기 위하여 핸드폰 기종은 Galaxy 시리즈를 사용한다.</br>
+무선 인터넷 환경(Wi-fi) 에서 HTTP 통신, TCP/IP 소켓서버를 이용하며, Bluetooth 모듈을 이용하여 p2p 통신방식으로 컨트롤러를 제어한다.
+
 
 ### 유니티
 * 유니티는 무료배포 버전과 Pro 버전이 있다. 본 제품에서는 기본으로 제공되는 Personal 버전을 사용하였다. 
@@ -35,14 +37,38 @@ Samsung Gear VR을 사용하기 위하여 핸드폰 기종은 Galaxy 시리즈�
 * 사용할 핸드폰에 컴퓨터를 연결 시켜주고 Build & run 시켜준다.
 
 
-## 메뉴 구성도
+## 사용 예시
 <img src="./Img/메뉴 흐름도.jpg">
+* 어플의 메뉴구성도이다. 위의 흐름대로 사용자는 사용하게 된다.
+### 어플사용 흐름
+<img src="./Img/로그인화면.jpg">
+유니티로 빌드 시킨 어플을 처음 실행 시키게 되면 나오는 화면이다. </br>
+우선 처음 사용하는 사용자는 계정이 없으므로 회원가입을 진행하도록 한다.
+
+<img src="./Img/회원가입.jpg">
+회원가입 진행 후 사용자는 로그인하게 되면 고객과 운전자에 따라 각각의 서비스 창으로 넘어가게 된다.
+<img src="./Img/고객 창.jpg">
+* 자신의 차량을 운전할 운전자에게 차량 Serial Number를 전송 한다.
+<img src="./Img/시리얼 전송.jpg">
+운전자는 자신이 제어할 차량을 확인하기 위하여 메시지로 받은 Serial Number를 입력하고 대기중인 차량이라면 Bluetooth 연결하는 화면으로 넘어갈 수 있다.
+<img src="./Img/컨트롤러연결.jpg">
+운전자는 자신의 컨트롤러와 Application을 연결하기 위하여 Bluetooth를 이용한다. </br>
+연결이 성공적으로 된 뒤에 360영상을 제공받는다.
+<img src="./Img/VR창.jpg">
+
+
+
+
+
+
 
 ```
-test?
-```
+test
+````
 
 
 
 ## 라이센스
-* jdk : You must accept the Oracle Binary Code License Agreement for Java SE to download this software.
+* 유니티 : https://unity3d.com/es/node/6675
+* SDK : https://developer.android.com/studio/terms?hl=ko
+* jdk : https://www.oracle.com/technetwork/java/javase/terms/license/index.html
