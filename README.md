@@ -33,7 +33,7 @@ Samsung Gear VR을 사용하기 위하여 핸드폰 기종은 Galaxy 시리즈�
 
 ## 설치
 깃에 첨부된 unity 프로젝트를 다운 받아 유니티로 열어준다.
-<img src="./Img/BuildSettings.jpg"> 
+<img src="./img/BuildSettings.jpg"> 
 * 사용할 핸드폰에 컴퓨터를 연결 시켜주고 Build & run 시켜준다.
 
 
