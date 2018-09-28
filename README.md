@@ -29,7 +29,6 @@ Samsung Gear VR을 사용하기 위하여 핸드폰 기종은 Galaxy 시리즈�
 * https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 * Java SE Development Kit 8u181 에서 OS에 맞는 버전을 받아 sdk와 마찬가지로 External Tools의 jdk칸에 경로를 설정 해줍니다.
 
-</br>
 ## 설치
 깃에 첨부된 unity 프로젝트를 다운 받아 유니티로 열어준다.
 <img src="./Img/BuildSettings.jpg"> 
