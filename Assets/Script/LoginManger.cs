@@ -28,7 +28,7 @@ public class LoginManger : MonoBehaviour
     {       
         Url = "http://18.179.74.220:8000";
         Login = "/vicer/login";
-            //아이디 패스워드 이름 폰넘버
+            //HTTP POST connection info
     }
 
     private void Update()
