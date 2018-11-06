@@ -26,16 +26,12 @@ public class LoginManger : MonoBehaviour
 
     void Start()
     {       
-<<<<<<< HEAD
+
         //Url = "http://18.179.74.220:8000"; //예전 url
         Url = "http://220.67.124.128:8090";
         Login = "/vicer/member_login.do";
             //아이디 패스워드 이름 폰넘버
-=======
-        Url = "http://18.179.74.220:8000";
-        Login = "/vicer/login";
-            //HTTP POST connection info
->>>>>>> 9a6a49f06e56330c7d7d6af38b098742fa8cea6e
+
     }
 
     private void Update()
