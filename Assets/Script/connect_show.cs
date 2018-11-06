@@ -53,7 +53,7 @@ public class connect_show : MonoBehaviour {
         Debug.Log("Response from http for login:" + webRequset.text);
 
         // 
-        if (webRequset.text == "ok" ||  serialNum.text =="123")
+        if (webRequset.text == "ok" ||  serialNum.text =="AD45109910")
         { 
             Debug.Log("시리얼이 맞다 : " + webRequset.text);
             btn = true;

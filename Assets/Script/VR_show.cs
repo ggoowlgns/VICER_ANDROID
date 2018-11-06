@@ -9,16 +9,16 @@ public class VR_show : MonoBehaviour {
 
     public GameObject vr_btn;
     public Text checkTxt;
+	public Text connectMsg;
 
+
+
+	void Start(){
+		connectMsg.text = "";
+	}
     void Update()
     {
-        if (checkTxt.text != "Not connect")
-        {
-            vr_btn.SetActive(true);
-        }
-        else {
-            vr_btn.SetActive(false);
-        }
+        
     }
 
 

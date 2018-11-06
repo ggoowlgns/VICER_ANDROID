@@ -36,14 +36,14 @@ public class BluetoothModel : BtObservale {
 
     void Start()
     {
-        sck = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+       /* sck = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         IPEndPoint localEndPoint = new IPEndPoint(IPAddress.Parse("52.79.181.10"), 5001);
         Debug.Log("conneting BTSCK server...");
         sck.Connect(localEndPoint);
         Debug.Log("connetion BTSCK");
         string text = "R";
         byte[] data = Encoding.UTF8.GetBytes(text);
-        sck.Send(data);
+        sck.Send(data);*/
     }
 
     void Awake() {

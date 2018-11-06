@@ -1,0 +1,7 @@
+#Sat Sep 29 13:22:26 KST 2018
+base.0=C\:\\Users\\lab305\\Documents\\GitHub\\VICER_ANDROID\\ForAndroidStudio\\VICER\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_d5cb8c26fd3936e4d81bc19562a4f503f15f35d1
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\lab305\\Documents\\GitHub\\VICER_ANDROID\\ForAndroidStudio\\VICER\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_80725c210e3a226f0bc2d56dcbe222c055f1728c\\classes.dex
+base.1=C\:\\Users\\lab305\\Documents\\GitHub\\VICER_ANDROID\\ForAndroidStudio\\VICER\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_80725c210e3a226f0bc2d56dcbe222c055f1728c
+file.0=C\:\\Users\\lab305\\Documents\\GitHub\\VICER_ANDROID\\ForAndroidStudio\\VICER\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_d5cb8c26fd3936e4d81bc19562a4f503f15f35d1\\classes.dex

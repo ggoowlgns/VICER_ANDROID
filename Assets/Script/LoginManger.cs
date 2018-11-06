@@ -9,8 +9,8 @@ public class LoginManger : MonoBehaviour
     [Header("LoginPanel")]
     public InputField id_Login;
     public InputField pswd_Login;
-    public string Url;
-    public string Login;
+    private string Url;
+    private string Login;
     public Text id;
     //private bool login = false;
 
@@ -26,8 +26,9 @@ public class LoginManger : MonoBehaviour
 
     void Start()
     {       
-        Url = "http://18.179.74.220:8000";
-        Login = "/vicer/login";
+        //Url = "http://18.179.74.220:8000"; //예전 url
+        Url = "http://220.67.124.128:8090";
+        Login = "/vicer/member_login.do";
             //아이디 패스워드 이름 폰넘버
     }
 
@@ -58,18 +59,21 @@ public class LoginManger : MonoBehaviour
         WWW webRequset = new WWW(Url + Login, form);
         yield return webRequset;
 
-        Debug.Log("Response from http for login:" + webRequset.text);
-        httpResult = webRequset.text;
+        //Debug.Log("Response from http for login:" + webRequset.text);
+        httpResult = webRequset.text.ToString();
+        Debug.Log("text : " + httpResult);
         Debug.Log("결과 :" + webRequset.error);
 
-        if (httpResult == "member" || id.text =="123")
-        {
-            StartCoroutine(DoFadeMember());
-        }
-        else if (httpResult == "driver" || id.text == "234")
+        if (httpResult == "<html><body>1</body></html>" || id.text =="123")
         {
             StartCoroutine(DoFadeDriver());
         }
+        /*
+        else if (httpResult == "driver" || id.text == "ggoowlgns@naver.com")
+        {
+            StartCoroutine(DoFadeDriver());
+        }
+        */
         else
         {
             Debug.Log("login error");

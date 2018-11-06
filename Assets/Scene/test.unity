@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 71437484}
   - component: {fileID: 71437483}
   - component: {fileID: 71437485}
+  - component: {fileID: 71437486}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -192,6 +193,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sphere: {fileID: 276020339}
   enableLog: 0
+--- !u!114 &71437486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 71437482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4dd8a013c554f469ed4859f6766e83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sphere: {fileID: 276020339}
+  enableLog: 0
 --- !u!1 &276020339
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,6 +218,7 @@ GameObject:
   - component: {fileID: 276020345}
   - component: {fileID: 276020344}
   - component: {fileID: 276020341}
+  - component: {fileID: 276020340}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -211,6 +226,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &276020340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 276020339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e9d4c2058f1b549a28cb4717c2ad67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &276020341
 MonoBehaviour:
   m_ObjectHideFlags: 0

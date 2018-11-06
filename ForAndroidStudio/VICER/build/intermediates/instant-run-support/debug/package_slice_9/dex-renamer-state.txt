@@ -1,0 +1,4 @@
+#Fri Sep 28 21:18:18 KST 2018
+base.0=C\:\\Users\\lab305\\Documents\\GitHub\\VICER_ANDROID\\ForAndroidStudio\\VICER\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_9
+renamed.0=classes.dex
+file.0=C\:\\Users\\lab305\\Documents\\GitHub\\VICER_ANDROID\\ForAndroidStudio\\VICER\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_9\\classes.dex

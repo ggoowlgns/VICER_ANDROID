@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\lab305\Documents\GitHub\VICER_ANDROID\ForAndroidStudio\VICER\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.3"
+        sha1="c323c36ecc68965c4cfb460f7721113d2b61ed03">
+        <dex dex="C:\Users\lab305\Documents\GitHub\VICER_ANDROID\ForAndroidStudio\VICER\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_80725c210e3a226f0bc2d56dcbe222c055f1728c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\lab305\Documents\GitHub\VICER_ANDROID\ForAndroidStudio\VICER\libs\unity-classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.3"
+        sha1="7e2055687e591ef7c407e598aa5df67b41e374a6">
+        <dex dex="C:\Users\lab305\Documents\GitHub\VICER_ANDROID\ForAndroidStudio\VICER\build\intermediates\transforms\dex\debug\folders\1000\2\unity-classes_5366396e534b592228bd978e5e88a5568da6a264\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lab305\.android\build-cache\7e1f53a633e3c89787201cac74e56fa9b2c9add1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="ee480f74e93a3d7f1cb226e86a6ef435e7fbb05f">
+        <dex dex="C:\Users\lab305\Documents\GitHub\VICER_ANDROID\ForAndroidStudio\VICER\build\intermediates\pre-dexed\debug\classes_68e638f754c0ba413095929bb64aa17916732388.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\lab305\Documents\GitHub\VICER_ANDROID\ForAndroidStudio\VICER\libs\AndroidPlugin.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.3"
+        sha1="af58d81df93f30ba9329e360e6c6b0228140290e">
+        <dex dex="C:\Users\lab305\Documents\GitHub\VICER_ANDROID\ForAndroidStudio\VICER\build\intermediates\transforms\dex\debug\folders\1000\2\AndroidPlugin_b897c4c34a6d912d614e4a2b6b940bda72a0a289\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lab305\Documents\GitHub\VICER_ANDROID\ForAndroidStudio\VICER\libs\AndroidPlugin.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="af58d81df93f30ba9329e360e6c6b0228140290e">
+        <dex dex="C:\Users\lab305\Documents\GitHub\VICER_ANDROID\ForAndroidStudio\VICER\build\intermediates\pre-dexed\debug\AndroidPlugin_b897c4c34a6d912d614e4a2b6b940bda72a0a289.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\lab305\Documents\GitHub\VICER_ANDROID\ForAndroidStudio\VICER\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.3"
+        sha1="16336ebac00f62dbde105289b58a0368ea522b2a">
+        <dex dex="C:\Users\lab305\Documents\GitHub\VICER_ANDROID\ForAndroidStudio\VICER\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_d5cb8c26fd3936e4d81bc19562a4f503f15f35d1\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lab305\Documents\GitHub\VICER_ANDROID\ForAndroidStudio\VICER\libs\unity-classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="7e2055687e591ef7c407e598aa5df67b41e374a6">
+        <dex dex="C:\Users\lab305\Documents\GitHub\VICER_ANDROID\ForAndroidStudio\VICER\build\intermediates\pre-dexed\debug\unity-classes_5366396e534b592228bd978e5e88a5568da6a264.jar" />
+    </item>
+
+</items>

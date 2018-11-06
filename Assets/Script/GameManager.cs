@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour {
     public Canvas screen3_canvas; // 고객이 대리기사 메시지보내는 창
     public Canvas screen4_canvas; // 시리얼 확인 창
     public Canvas screenBT_canvas; // 블루투스 선택창
+    public Canvas ScreenNoti_canvas;
     //public Canvas screen5_canvas;
 
     public CanvasGroup Main;
@@ -19,6 +20,7 @@ public class GameManager : MonoBehaviour {
     public CanvasGroup screen3;
     public CanvasGroup screen4;
     public CanvasGroup screenBT;
+    public CanvasGroup screenNoti;
     //public CanvasGroup screen5;
 
     void Awake()

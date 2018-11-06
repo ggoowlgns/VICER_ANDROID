@@ -23,11 +23,15 @@ public class BluetoothController : MonoBehaviour, IBtObserver {
     [SerializeField]
     public Text bluetoothMessage;
 
+    public static string macAddress;
+
     private void Awake() {
         this.bluetooth = Bluetooth.getInstance();
     }
 
     private void Start() {
+
+
         this.bluetoothModel.AddObserver(this);
         this.deviceDropdown.ClearOptions();
 
@@ -38,7 +42,8 @@ public class BluetoothController : MonoBehaviour, IBtObserver {
 
         this.connectButton.onClick.AddListener(
              () => {
-                 this.bluetooth.Connect(this.deviceDropdown.options[this.deviceDropdown.value].text);
+                 //this.bluetooth.Connect(this.deviceDropdown.options[this.deviceDropdown.value].text);
+                 macAddress = this.deviceDropdown.options[this.deviceDropdown.value].text;
              });
     }
 

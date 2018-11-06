@@ -20,15 +20,14 @@ public class SignupManager : MonoBehaviour {
     [Header("job toggle ")]
     public Toggle check;
     // 회원가입완료시 나오게 될 안내창의 텍스트 메시지
-    public Text alertBody;
+    private Text alertBody;
 
     // http 통신에 사용할 주소
     private string Url;
     private string SignUp;
 
     // 직업이 무엇인지 확인하기 위한 필드
-    public CanvasGroup onButton;
-    public string ocup ;
+    private string ocup ;
 
     //날짜 계산용 정수필드
     private int y;
@@ -41,9 +40,9 @@ public class SignupManager : MonoBehaviour {
 
     
     void Start () {
-        Url = "http://18.179.74.220:8000"; 
+        Url = "http://220.67.124.128:8090"; 
         //Url = "http://192.168.35.211";
-        SignUp = "/vicer/reg";
+        SignUp = "/vicer/member_reg.do";
         
     }
 
@@ -76,7 +75,7 @@ public class SignupManager : MonoBehaviour {
         StartCoroutine(SignupGo());
         Debug.Log("signup go");
 
-        if (httpResult == "success")
+        if (httpResult == "1")
         {
             alertBody.text = "회원가입에 성공 하셨습니다. 이제 로그인 해주시기 바랍니다.";
         }
@@ -109,7 +108,13 @@ public class SignupManager : MonoBehaviour {
         form.AddField("passwd", pswd_signUp.text);
         //yyyy/mm/dd
         form.AddField("email", email_signUp.text);
-        form.AddField("serialNum", car_serial_signUp.text);
+        if (ocup == "member")
+        {
+            form.AddField("serialNum", car_serial_signUp.text);
+        }
+        else {
+            form.AddField("serialNum", "-");
+        }
         form.AddField("ocup", ocup);
         form.AddField("birth", y.ToString() +"/"+ m.ToString() +"/"+ d.ToString());
         
@@ -121,7 +126,7 @@ public class SignupManager : MonoBehaviour {
         Debug.Log("Response from http for signup:" + webRequset.text);
         Debug.Log("Response from http for signup:" + webRequset.isDone);
         Debug.Log("Response from http for signup:" + webRequset.error);
-        httpResult = webRequset.text;
+        httpResult = webRequset.text.ToString();
 
 
     }

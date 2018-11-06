@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\connect_show.cs">
+    <Files>
+      <File FileName="Assets\Script\VR_scene.cs" Line="26" Column="48" />
+      <File FileName="Assets\Script\LoginManger.cs" Line="118" Column="23" />
+      <File FileName="Assets\Script\sendSMS.cs" Line="52" Column="28" />
+      <File FileName="Assets\Script\connect_show.cs" Line="56" Column="69" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
